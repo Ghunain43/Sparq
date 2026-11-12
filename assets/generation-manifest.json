@@ -1,0 +1,64 @@
+{
+  "tool": "Built-in image_gen",
+  "prompts": [
+    [
+      "aero",
+      "A metallic ice-blue streamlined electric executive sedan, low roof, elegant four doors, unique slim segmented headlights."
+    ],
+    [
+      "terra",
+      "A metallic deep emerald electric family SUV, strong athletic shoulder, clean confident proportions."
+    ],
+    [
+      "pulse",
+      "A metallic coral red compact electric hatchback, playful energetic short body, geometric lamps."
+    ],
+    [
+      "apex",
+      "A metallic violet electric hypercar, very low wide sculptural body, dramatic aero, futuristic unique design."
+    ],
+    [
+      "rosso",
+      "An original scarlet red electric supercar, passionate Italian design mood, low wide dramatic wedge, tiny yellow accents, original sharp lamps."
+    ],
+    [
+      "prisma",
+      "An original silver graphite electric sports sedan, precise German design mood, faceted sharp lines and unique segmented LED light signature."
+    ],
+    [
+      "classica",
+      "An original champagne silver electric grand touring coupe, rounded flowing silhouette, sculptural haunches, original oval lamps, elegant long-distance sporting feel."
+    ]
+  ],
+  "files": [
+    {
+      "name": "aero",
+      "file": "car-1.webp"
+    },
+    {
+      "name": "terra",
+      "file": "car-2.webp"
+    },
+    {
+      "name": "pulse",
+      "file": "car-3.webp"
+    },
+    {
+      "name": "apex",
+      "file": "car-4.webp"
+    },
+    {
+      "name": "rosso",
+      "file": "car-5.webp"
+    },
+    {
+      "name": "prisma",
+      "file": "car-6.webp"
+    },
+    {
+      "name": "classica",
+      "file": "car-7.webp"
+    }
+  ],
+  "common_prompt": "Use case: product-mockup. Original fictional SPARQ vehicle, photorealistic studio render. Near-side profile with slight front-three-quarter angle, front pointing right. Entire vehicle and wheels visible, horizontally centered, 90% width, wheel baseline 78% canvas height, landscape 3:2. Crisp paint and rubber, bright softbox edge lighting. Fully transparent background. No text, lettering, logos, badges, watermark, or copied production vehicles. Single vehicle only."
+}
