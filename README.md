@@ -1,81 +1,145 @@
 # SPARQ — Ignite the road.
 
-## Project and team
-Zenova / SPARQ · Team: [team name] · Members: [team members]
+A fictional electric-car showcase for Pakistan. Seven original concept models, a cinematic hero carousel, a configurator, a model comparison, a PKR savings calculator and a test-drive form, all in plain HTML, CSS and JavaScript.
 
-## Brief
-**#5 Futuristic Car Theme Website.** A fictional electric-vehicle showcase for Pakistan, upgraded in place using static HTML, CSS, and vanilla JavaScript. No framework, backend, installation, or build step is required. Ready for static deployment to Vercel.
+**Brief:** #5 Futuristic Car Theme Website  
+**Live demo:** _add your Vercel/Netlify link here_  
+**Team:** _add team name and members here_
+
+> SPARQ is a fictional brand. All data, prices and specs are sample data. No real manufacturer logos, photos or brand assets are used.
+
+---
+
+## Screenshots
+
+### Light theme
+
+| Hero | The city |
+|---|---|
+| ![Hero](screenshots/01-hero-light.png) | ![The city](screenshots/02-city-light.png) |
+
+| Lineup: Aero | Lineup: Terra |
+|---|---|
+| ![Lineup Aero](screenshots/03-lineup-light-aero.png) | ![Lineup Terra](screenshots/04-lineup-light-terra.png) |
+
+![Collection](screenshots/05-collection-light.png)
+
+![Performance](screenshots/06-performance-light.png)
+
+![Configurator](screenshots/07-configurator-light.png)
+
+![Savings calculator and test drive](screenshots/08-drive-light.png)
+
+### Dark theme
+
+![Lineup: Pulse](screenshots/09-lineup-dark-pulse.png)
+
+![Collection](screenshots/10-collection-dark.png)
+
+![Performance](screenshots/11-performance-dark.png)
+
+---
+
+## Features
+
+- **Hero carousel:** seven models with wraparound, arrow buttons, left/right keys and swipe. The accent color follows the active car, and cars tilt slightly with the mouse on desktop.
+- **SPARQ wordmark:** large wordmark in the top right corner, under the navbar, behind the cars.
+- **Story chapters:** six chapters with a fixed chapter rail and a scroll progress bar.
+- **Lineup scene:** scroll-driven showcase with range, 0-100 and top speed bars for each model.
+- **Collection:** cards for all seven models. Open a description with hover, tap or Enter.
+- **Performance:** selectable model strip with animated stat counters.
+- **Configurator:** pick a model, exterior color and battery (Long Range adds 16% range and PKR 1.2M) with a live build summary.
+- **Compare:** select two models to open a side-by-side specification table. Escape closes it.
+- **Savings calculator:** compares monthly EV and petrol cost from your daily distance.
+- **Test-drive form:** frontend demo with validation. It stores and sends nothing.
+- **Dark and light theme:** follows the system setting, saved after you switch.
+- **Floating navbar:** a single pill tinted by the active car color, with a rounded dropdown on mobile.
+
+## The lineup
+
+| Model | Class | Range | 0-100 km/h | Top speed | Fast charge | Sample price (PKR) |
+|---|---|---|---|---|---|---|
+| Aero | Sedan | 520 km | 4.8 s | 220 km/h | 30 min | 12,500,000 |
+| Terra | SUV | 480 km | 5.6 s | 200 km/h | 32 min | 14,800,000 |
+| Pulse | Hatchback | 390 km | 3.9 s | 190 km/h | 25 min | 9,200,000 |
+| Apex | Hypercar | 410 km | 2.4 s | 320 km/h | 22 min | 42,500,000 |
+| Rosso | Supercar | 450 km | 2.8 s | 310 km/h | 24 min | 36,000,000 |
+| Prisma | Sport sedan | 560 km | 4.2 s | 250 km/h | 28 min | 18,200,000 |
+| Classica GT | Grand tourer | 590 km | 3.6 s | 280 km/h | 30 min | 28,500,000 |
+
+Rosso, Prisma and Classica GT explore Italian supercar, German precision sedan and rounded grand-tourer design moods. They are original fictional designs, not real vehicles and not affiliated with any manufacturer.
+
+## Tech stack
+
+- HTML, CSS and vanilla JavaScript
+- No framework, no backend, no build step, no runtime libraries
+- Fonts: Anton and Inter, self-hosted in `assets/fonts` (SIL OFL)
+- Images: seven original AI-generated transparent concept renders (WebP), plus a showroom background
 
 ## Run locally
-Open `index.html`, or run `python -m http.server 5174 --bind 127.0.0.1` in this directory and visit http://127.0.0.1:5174. Fonts need an internet connection; all vehicle images are local.
 
-For Vercel, import this directory using the **Other** preset, leave the build command empty, and use the project root as the output directory. No deployment has been performed as part of this update.
+Open `index.html` in a browser, or serve the folder:
 
-## What changed
-- `index.html`: kept the working SPARQ carousel, configurator, performance, calculator, comparison and test-drive flows, and organized them into six story chapters with a fixed chapter rail.
-- `styles.css`: rebuilt the home scene around the car with restrained glassmorphism panels, a fully visible vehicle, outlined metallic SPARQ wordmark, spotlight, perspective floor grid, light sweep, particles, road line and responsive mobile stacking.
-- `styles.css`: added a tokenized dark/light showroom system with system-theme defaulting, accent-aware surfaces, smooth theme transitions, AA-conscious text colors, and reduced-motion overrides.
-- `script.js`: added persistent theme switching, chapter progress/current-state tracking, a scroll-driven seven-model lineup scene with spec bars, and preserved the existing seven-car wraparound carousel, keyboard/swipe support, configurator, comparison, calculator and validated non-submitting form.
-- `assets/car-1.webp` through `car-7.webp`: seven original AI-generated transparent concept-car renders, approximately 1 MB combined. Filenames and original four model identities/specifications are preserved. The temporary real-manufacturer reference images were replaced/removed to follow the updated no-real-brand-assets requirement.
-- `assets/generation-manifest.json`: model-specific prompts, shared art direction, and output mapping.
+```bash
+python -m http.server 5174 --bind 127.0.0.1
+```
 
-## Latest update
-- **Hero wordmark:** the large outlined SPARQ now sits lower and centred, behind the cars as solid type (light in dark theme, dark in light theme), sized by viewport height so it never touches the headline or the model details (checked from 360 px phones to 1920 px screens).
-- **Car descriptions:** every model in "Find your frequency" has a description, a "best for" line and key numbers. Hover a card (mouse), tap it (touch) or press Enter on it (keyboard) to open it; Escape or a tap elsewhere closes it. Descriptions live in `DESCRIPTIONS` at the top of `script.js`.
-- **The City section:** the road photo (`assets/showroom.webp`) and its light text appear in dark mode only. Light mode uses a clean tinted backdrop.
-- **Light/dark consistency:** the "Your build" card, colour swatch rings and footer now follow the theme instead of staying dark in light mode.
-- **Drive section:** the savings calculator and the test-drive form are merged into one section (`#drive`) with two matching cards side by side, stacking on phones. `#calculator` and `#test-drive` still exist as anchors on the cards.
-- **Phones:** the hero car is centred under the wordmark; collection cards use one column below 760 px so descriptions always fit.
+Then visit http://127.0.0.1:5174.
 
-## Lineup
-Aero, Terra, Pulse, Apex, Rosso, Prisma and Classica GT. Original four price/range/acceleration figures remain unchanged. Added top speeds and charge times are fictional. Rosso, Prisma and Classica GT explore Italian supercar, German precision sedan and rounded grand-tourer design languages. They are original fictional designs, not Ferrari, Audi or Porsche vehicles or affiliations.
+## Deploy
 
-## Interaction details
-Choose any model from a card or configurator. Use hero arrows, left/right keys while the hero is visible, or swipe to cycle through all seven. Select two Compare buttons to open the specification table; Escape closes it. The configurator offers illustrative finish adjustments and drag parallax, not a true 360-degree 3D model. Long Range adds 16% sample range and PKR 1.2 million. Performance gauges show standard specifications for the selected model.
+Works as a static site on Vercel, Netlify or GitHub Pages. On Vercel, import the folder with the **Other** preset, leave the build command empty and use the project root as the output directory.
 
-The calculator assumes 30 days/month, 0.15 kWh/km, electricity at PKR 12/kWh and petrol at PKR 280/litre with 12 km/litre. These are illustrative rates, not current market prices. At 35 km/day: EV PKR 1,890; petrol PKR 24,500; difference PKR 22,610.
+## Project structure
 
-The form is a frontend demonstration. Use dummy details only. It validates required fields, email and date, but stores and sends nothing and creates no booking. There are no payments, accounts, analytics, cookies or local storage.
+```
+Zenova/
+├── index.html
+├── styles.css
+├── script.js
+├── README.md
+├── screenshots/
+└── assets/
+    ├── car-1.webp ... car-7.webp
+    ├── showroom.webp
+    ├── generation-manifest.json
+    └── fonts/
+```
+
+## Calculator assumptions
+
+30 days per month, 0.15 kWh/km, electricity at PKR 12/kWh, petrol at PKR 280/litre and 12 km/litre. These are illustrative rates, not current market prices.
+
+At 35 km/day: EV PKR 1,890, petrol PKR 24,500, difference PKR 22,610 per month.
+
+## Accessibility and performance
+
+- One `h1`, a skip link, visible focus states and keyboard support for the carousel, cards, compare dialog and form
+- Text contrast checked in both themes
+- `prefers-reduced-motion` turns off the intro, particles, parallax, tilt and animated transitions
+- Lazy-loaded images with an inline SVG fallback if an image fails
+- No horizontal overflow from 360 px phones to 1920 px screens
+
+## Privacy
+
+No accounts, payments, analytics or cookies. The test-drive form is a demo and nothing is submitted. Only the chosen theme is saved in the browser (`localStorage`).
 
 ## AI tools and credits
-- Codex: implementation, original images via the built-in image-generation tool, and checks.
-- Claude: [add contribution if used by your team; not used during this update].
-- Fonts: Anton and Inter, served by Google Fonts, with local system fallbacks.
-- Images: original AI-generated transparent concept artwork; prompts recorded in `assets/generation-manifest.json`. No scraped manufacturer photography, logos or real brand assets are included.
-- Runtime libraries: none. Standard browser APIs only. Pillow was used during asset preparation, not required to run or deploy.
 
-## Assets you need to supply
-No car assets are missing, including models 5–7. Supply only your team name/member credits and a Vercel deployment URL if desired. An inline SVG fallback is retained for failed image loads; replacement-image locations are documented in code.
-
-## What we checked or changed
-
-Performed: JavaScript syntax; all seven hero images and fallback behavior; carousel wraparound; theme persistence; chapter navigation and lineup controls; model, finish and battery updates; calculator totals; required-form errors and successful dummy submission; one h1; 360px document overflow and mobile menu. Hero sizing, contrast tokens, visible focus, lazy loading, capped CSS-only effects and reduced-motion behavior were reviewed in code. The assets are original concept visuals rather than real-world car photography, so the site stays within the fictional-brand brief.
-
-No Vercel URL was supplied or deployed, so the fresh-browser production test remains outstanding.
+- **Codex:** implementation, car image generation and checks
+- **Claude:** small layout edits (wordmark position) and documentation
+- **Images:** original AI-generated artwork. The prompts are recorded in `assets/generation-manifest.json`
+- **Fonts:** Anton and Inter via Fontsource
 
 ## Manual test checklist
-- [ ] At 360px, check the whole page: no horizontal scroll, readable labels, full-width form, working menu and hero swipe.
-- [ ] Keyboard only: skip link, visible focus, carousel left/right keys, all seven models, swatches, compare dialog and Escape/focus restoration. Verify arrows still work normally in inputs and selects.
-- [ ] Contrast: check normal, hover, selected, focus and inline-error states with a contrast checker (normal text target 4.5:1).
-- [ ] Form: empty submit, invalid email, past date, then dummy valid details. Confirm no booking/network submission occurs and editing hides old success.
-- [ ] Reduced motion: enable OS/browser “Reduce motion,” refresh, and confirm no intro, particles, parallax, tilt or animated transitions.
-- [ ] Assets: disable the network after fonts load; local car images remain available. Test a missing car image to verify the SVG fallback.
-- [ ] After Vercel deployment, open its URL in a fresh/private browser. Test navigation, assets, carousel, compare, calculator and form with the console open.
 
-SPARQ is a fictional brand. All data, prices and specs are sample data.
+- [ ] 360 px: no horizontal scroll, working menu, full-width form, hero swipe
+- [ ] Keyboard only: skip link, focus order, carousel keys, compare dialog and Escape
+- [ ] Form: empty submit, invalid email, past date, then valid dummy details
+- [ ] Reduced motion: no intro, particles, parallax or tilt
+- [ ] Offline after load: car images still show, and a missing image shows the SVG fallback
+- [ ] Deployed URL in a private window with the console open
 
-## Update: polish pass
-- Fixed a startup crash in `script.js` (a missing `.story-section` element stopped the hero cars, lineup and form from loading).
-- Fonts (Anton, Inter) are now self-hosted in `assets/fonts` (SIL OFL license, via Fontsource), so the site works without Google Fonts.
-- Added a final polish layer at the end of `styles.css`: consistent display typography, a gradient SPARQ wordmark, cleaner hero layout, and fixed light-mode contrast and overlaps.
-- Checked in a headless browser: no console errors, no horizontal overflow at 1440px or 390px, dark and light themes.
+## License
 
-## Update: final polish
-- Navbar is now one floating pill whose tint follows the active car color; mobile menu opens as a rounded dropdown.
-- Performance chapter uses a showroom background image supplied by the team (credit: team-supplied/AI-generated; replace with the exact source in this line before submitting) with a reflected car.
-- Hero side cars tidied into a consistent background lineup; text contrast sampled for all 7 cars in both themes (lowest ratio 8:1).
-
-## Update: last tweaks
-- City chapter uses the showroom background image; Performance chapter shows all 7 cars with a selectable strip.
-- Cars follow the mouse with a small 3D tilt (desktop only, disabled with reduced motion).
-- Lineup chapter has a glass info card, floor glow and reflection; navbar is slimmer; light-mode text contrast fixed.
+Code: add your license here (for example MIT). Fonts: SIL Open Font License. Images: original AI-generated concept art for this project.
