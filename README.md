@@ -2,9 +2,7 @@
 
 A fictional electric-car showcase for Pakistan. Seven original concept models, a cinematic hero carousel, a configurator, a model comparison, a PKR savings calculator and a test-drive form, all in plain HTML, CSS and JavaScript.
 
-**Brief:** #5 Futuristic Car Theme Website  
-**Live demo:** _add your Vercel/Netlify link here_  
-**Team:** _add team name and members here_
+**Team:** Ghunain Fayaz, Emaan Ferozi
 
 > SPARQ is a fictional brand. All data, prices and specs are sample data. No real manufacturer logos, photos or brand assets are used.
 
@@ -131,15 +129,3 @@ No accounts, payments, analytics or cookies. The test-drive form is a demo and n
 - **Images:** original AI-generated artwork. The prompts are recorded in `assets/generation-manifest.json`
 - **Fonts:** Anton and Inter via Fontsource
 
-## Manual test checklist
-
-- [ ] 360 px: no horizontal scroll, working menu, full-width form, hero swipe
-- [ ] Keyboard only: skip link, focus order, carousel keys, compare dialog and Escape
-- [ ] Form: empty submit, invalid email, past date, then valid dummy details
-- [ ] Reduced motion: no intro, particles, parallax or tilt
-- [ ] Offline after load: car images still show, and a missing image shows the SVG fallback
-- [ ] Deployed URL in a private window with the console open
-
-## License
-
-Code: add your license here (for example MIT). Fonts: SIL Open Font License. Images: original AI-generated concept art for this project.
